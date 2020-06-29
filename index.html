@@ -105,7 +105,7 @@
             });
         }
         
-        geojson = L.geoJson(data, {
+        var geojson = L.geoJson(data, {
             style:style,
             onEachFeature: onEachFeature
         }).bindTooltip(function (layer){
