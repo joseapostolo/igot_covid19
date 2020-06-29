@@ -116,7 +116,7 @@
             onEachFeature: onEachFeature
         }).bindTooltip(function (layer){
             return layer.feature.properties.Concelho 
-                   + '<p style="color:purple">' + layer.feature.properties.casos.toString() + ' casos or 10.000 hab. </p>';       
+                   + '<p style="color:purple">' + layer.feature.properties.Confirmados.toString() + ' Confirmados or 10.000 hab. </p>';       
         }).addTo(map);
 
          var legend = L.control({position: 'bottomright'}); // Try the other three corners if you like.
