@@ -124,11 +124,10 @@
 
               // Loop through our the classes and generate a label with a colored square for each interval.
               // If you are creating a similar choropleth map, you do not need to change lines below.
-              <b>
               for (var i = 0; i < grades.length; i++) {
                  div.innerHTML +=
                   '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
-                  grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+'); <br>  </b>
+                  grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
               } 
 
               return div; 
