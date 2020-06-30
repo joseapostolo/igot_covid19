@@ -46,7 +46,7 @@
           });
 
          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-           attribution: 'Map data © OpenStreetMap contributors, CC-BY-SA, Imagery © Mapbox',
+           attribution: 'Map data Â© OpenStreetMap contributors, CC-BY-SA, Imagery Â© Mapbox',
            maxZoom: 11,
            minZoom: 5,
            id: 'mapbox.light',
@@ -84,7 +84,7 @@
                 fillOpacity: 0.7
             });
 
-            // Bring the highlighted feature to front so that the border doesn’t clash with nearby states
+            // Bring the highlighted feature to front so that the border doesnâ€™t clash with nearby states
             // But not for IE, Opera or Edge, since they have problems doing bringToFront on mouseover
             if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
                 feature.bringToFront();
@@ -109,8 +109,8 @@
             style:style,
             onEachFeature: onEachFeature
         }).bindTooltip(function (layer){
-            return layer.feature.properties.Concelho 
-                   + '<p style="color:purple">' + layer.feature.properties.Confirmado.toString() + ' casos por 10.000 hab. </p>';       
+            return ' Concelho: ' + layer.feature.properties.Concelho 
+                   + '<p style="color:purple">' + ' Distrito: ' + layer.feature.properties.Distrito + '<p style="color:purple">'+ layer.feature.properties.Confirmado.toString() + ' casos por 10.000 hab. </p>';       
         }).addTo(map);
 
          var legend = L.control({position: 'bottomright'}); // Try the other three corners if you like.
